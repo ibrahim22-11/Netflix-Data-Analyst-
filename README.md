@@ -56,6 +56,41 @@ Both dashboards are displayed directly below 👇 so you can view them at a glan
 
 ---
 
+
+
+## 🔎 Analysis Summary  
+
+### 🗄️ SQL Work  
+- Used **SELECT, GROUP BY, COUNT, DISTINCT** for summarizing data.  
+- Applied **WHERE filters** to separate **Movies vs TV Shows**.  
+- Excluded invalid/null ratings using **NOT IN** condition.  
+- Aggregated data by **Year, Country, Directors, Duration**.  
+- Extracted insights such as:  
+  - Total unique genres 🎭  
+  - Movies/TV Shows released per year 📅  
+  - Ratings distribution ⭐  
+  - Top countries producing content 🌍  
+  - Number of directors 🎬  
+
+---
+
+### 🎨 Power BI Work  
+- Created **KPI Cards** → Total Titles, Drama, Comedy, Crime, Documentaries, Horror.  
+- Designed **World Map** → Netflix content distribution by country.  
+- Built **Bar & Column Charts** → Content per year, Ratings distribution.  
+- Used **Pie/Donut Charts** → Movies vs TV Shows ratio.  
+- Added **Line Charts** → Trends of Movies & TV Shows across years.  
+- Used **Tables** → Directors & Country-wise contribution.  
+- Styled the dashboards in a **dark Netflix-inspired theme** for clarity.  
+
+---
+
+## 👨‍💻 Project By  
+**Ibrahim Shakir** | *Aspiring Data Analyst*  
+
+
+
+
 ## 🗃️ SQL Queries & Insights  
 
 ### 🔹 1. Count Distinct Genres  
@@ -164,34 +199,5 @@ ORDER BY MovieAcctoPermin DESC;
 
 
 
-## 🔎 Analysis Summary  
-
-### 🗄️ SQL Work  
-- Used **SELECT, GROUP BY, COUNT, DISTINCT** for summarizing data.  
-- Applied **WHERE filters** to separate **Movies vs TV Shows**.  
-- Excluded invalid/null ratings using **NOT IN** condition.  
-- Aggregated data by **Year, Country, Directors, Duration**.  
-- Extracted insights such as:  
-  - Total unique genres 🎭  
-  - Movies/TV Shows released per year 📅  
-  - Ratings distribution ⭐  
-  - Top countries producing content 🌍  
-  - Number of directors 🎬  
-
----
-
-### 🎨 Power BI Work  
-- Created **KPI Cards** → Total Titles, Drama, Comedy, Crime, Documentaries, Horror.  
-- Designed **World Map** → Netflix content distribution by country.  
-- Built **Bar & Column Charts** → Content per year, Ratings distribution.  
-- Used **Pie/Donut Charts** → Movies vs TV Shows ratio.  
-- Added **Line Charts** → Trends of Movies & TV Shows across years.  
-- Used **Tables** → Directors & Country-wise contribution.  
-- Styled the dashboards in a **dark Netflix-inspired theme** for clarity.  
-
----
-
-## 👨‍💻 Project By  
-**Ibrahim Shakir** | *Aspiring Data Analyst*  
 
 
