@@ -9,7 +9,7 @@
 ---
 
 ## 🖤 Project Overview  
-Hi 👋, I’m **Ibrahim Shakir – Aspiring Data Analyst**.  
+Hi 👋, I’m **Ibrahim Mufaddal Shakir – Aspiring Data Analyst**.  
 
 This project is an **end-to-end analysis of Netflix data** using **SQL for data preparation** and **Power BI for dashboarding**.  
 It highlights insights into **Movies, TV Shows, Genres, Ratings, Countries, and Directors**, giving a complete picture of Netflix’s content strategy.  
