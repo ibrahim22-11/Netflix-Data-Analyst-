@@ -56,97 +56,108 @@ Both dashboards are displayed directly below 👇 so you can view them at a glan
 
 ---
 
-## 🗃️ SQL Queries Used  
+## 🗃️ SQL Queries & Insights  
 
-I used **SQL queries** for cleaning, transformations, and extracting insights before building Power BI dashboards.  
-
-<details>
-<summary>🔹 Count Genres</summary>
-
+### 🔹 1. Count Distinct Genres  
 ```sql
 SELECT COUNT(DISTINCT(FULLGENRE))
 FROM NETFLIX;
-</details> <details> <summary>🔹 Movies Per Year</summary>
-sql
-Copy
-Edit
+👉 Returns the total number of unique genres in the dataset.
+
+
+
+🔹 2. Movies Per Year
+
 SELECT REALESEYEAR, 
-       COUNT(TITLES) AS TOTALMOVIES
+COUNT(TITLES) AS TOTALMOVIES
 FROM NETFLIX
 GROUP BY REALESEYEAR
 ORDER BY TOTALMOVIES DESC;
-</details> <details> <summary>🔹 Movies vs TV Shows Count</summary>
-sql
-Copy
-Edit
+👉 Shows the number of movies released each year, helping to analyze content trends over time.
+
+
+
+
+🔹 3. Movies Count
+
 SELECT COUNT(TITLES)
 FROM NETFLIX
 WHERE CATEGOERY LIKE 'Movie';
-</details> <details> <summary>🔹 Ratings & Categories Distribution</summary>
-sql
-Copy
-Edit
-SELECT RATING, 
-       CATEGOERY,
-       COUNT(TITLES) AS TOTALSHOWS
+👉 Returns the total number of movies available on Netflix.
+
+
+
+
+🔹 4. Ratings & Categories Distribution
+
+SELECT RATING,
+CATEGOERY,
+ COUNT(TITLES) AS TOTALSHOWS
 FROM NETFLIX
 WHERE RATING NOT IN ('[NULL]','R','66 min','84 min','74 min','TV-Y7-FV')
 GROUP BY RATING, CATEGOERY
 ORDER BY TOTALSHOWS DESC;
-</details> <details> <summary>🔹 TV Shows Per Year</summary>
-sql
-Copy
-Edit
+👉 Gives the distribution of Movies & TV Shows across maturity ratings (TV-MA, TV-14, PG, etc.).
+
+
+
+
+🔹 5. TV Shows Per Year
+
 SELECT REALESEYEAR,
-       COUNT(TITLES) AS TOTALCATEGOERY
+COUNT(TITLES) AS TOTALCATEGOERY
 FROM NETFLIX
 WHERE CATEGOERY LIKE 'TV Show'
 GROUP BY REALESEYEAR
 ORDER BY TOTALCATEGOERY DESC;
-</details> <details> <summary>🔹 Directors by Movies</summary>
-sql
-Copy
-Edit
+👉 Shows the number of TV Shows released each year, useful for timeline analysis.
+
+
+
+
+🔹 6. Directors by Movies
+
 SELECT DIRECTORS,
-       COUNT(TITLES) AS TOTAL
+COUNT(TITLES) AS TOTAL
 FROM NETFLIX
 WHERE CATEGOERY LIKE 'Movie'
 GROUP BY DIRECTORS
 ORDER BY TOTAL DESC;
-</details> <details> <summary>🔹 Total Movies per Country</summary>
-sql
-Copy
-Edit
+👉 Returns the total number of movies directed by each director, sorted by highest contributors.
+
+
+
+
+🔹 7. Movies Per Country
+
 SELECT COUNTRIES,
-       COUNT(TITLES) AS TOTALSHOWSPERCOUNTRY
+COUNT(TITLES) AS TOTALSHOWSPERCOUNTRY
 FROM NETFLIX
 WHERE CATEGOERY LIKE 'Movie'
 GROUP BY COUNTRIES
 ORDER BY TOTALSHOWSPERCOUNTRY DESC;
-</details> <details> <summary>🔹 Total TV Show Directors</summary>
-sql
-Copy
-Edit
+👉 Shows the total number of movies produced per country, highlighting leading content-producing regions.
+
+
+
+
+🔹 8. Unique TV Show Directors
+
 SELECT COUNT(DISTINCT(DIRECTORS))
 FROM NETFLIX
 WHERE CATEGOERY LIKE 'TV Show';
-</details> <details> <summary>🔹 Movie Durations Distribution</summary>
-sql
-Copy
-Edit
+👉 Returns the number of unique directors who directed TV Shows on Netflix.
+
+
+
+
+🔹 9. Movie Duration Distribution
+
 SELECT DURATIONS,
-       COUNT(DURATIONS) AS MovieAcctoPermin
+COUNT(DURATIONS) AS MovieAcctoPermin
 FROM NETFLIX
 WHERE CATEGOERY LIKE 'Movie' 
   AND DURATIONS <> '[null]'
 GROUP BY DURATIONS
 ORDER BY MovieAcctoPermin DESC;
-</details>
-🚀 Future Scope
-📌 Add Actor & Runtime analysis.
-
-📌 More advanced filters for genre/country/year.
-
-📌 Predictive analysis with ML integration.
-
-<p align="center"> 👨‍💻 Created by <b>Ibrahim Shakir</b> | Aspiring Data Analyst </p> ```
+👉 Gives a distribution of movies by their duration (minutes), useful for runtime analysis.
